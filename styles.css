@@ -1,0 +1,402 @@
+:root {
+    --text-color: #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #d6f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    transition: opacity 0.5s ease;
+}
+
+body:fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* anv bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    padding-top: 10px;
+    height: 80px;
+    margin-top: 20px;
+}
+
+nav .left a {
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 1s ease-in-out
+    opacity 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+}
+
+nav .left:hover {
+    transform: scale(1.2);
+    opacity: 0.8;          /* medyo transparent */
+    text-shadow: 0 2px 11px rgba(8, 0, 255, 0.3);
+}
+
+nav .right a {
+    color: black;
+    margin: 0 7px;
+    transition: .3s;
+}
+
+nav .right a:last-child {
+    color: white;
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    
+}
+
+nav .right a:last-child:hover {
+    color: black;
+    background-color: rgba(255, 29, 29, 0.868);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+.fa-arrow-down:hover{
+    color: red;
+    transform: scale(1.2);
+}
+
+nav .right .fa-github:hover, .github:hover{
+    color: blue;
+    transform: scale(1.5);
+}
+
+nav .right .fa-instagram:hover, .insta:hover{
+    color: rgb(255, 0, 111);
+    transform: scale(1.5);
+}
+
+nav .right .fa-tiktok:hover, .tiktok:hover{
+    color: #25F4EE;
+    transform: scale(1.5);
+}
+
+nav .right .fa-facebook:hover, .fb:hover{
+    color: blue;
+    transform: scale(1.5);
+}
+
+
+/* section 1: hero */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    gap: 40px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 0 0 3px rgb(78, 78, 78);
+    transition: 0.5s;
+}
+
+.hero-section:hover {
+    background-color: #99e6e6;
+    border: none;
+}
+
+
+.hero-section .text {
+    flex: 5;
+}
+
+.hero-section .text h2 {
+    font-size: 40px;
+}
+
+.hero-section .text p {
+    text-align: justify;
+    font-size: 1.0em;
+}
+
+.hero-section .headshot {
+    flex: 2;
+}
+
+.hero-section .headshot img {
+    width: 300px;
+    padding-right: 10px;
+    border-radius: 50%;
+}
+
+.hero-section .links {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.hero-section .links a {
+    display: inline;
+    width: 100%;
+    border: 1.5px solid black;
+    gap: 5px;
+    padding: 5px 10px;
+    margin: 10px;
+    transition: .5s;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.hero-section .links a:hover {
+    background-color: rgba(255, 29, 29, 0.868);
+    color: white;
+}
+
+/* section 2: aboutme */ 
+.about-section {
+    justify-content: center;
+    margin: 50px 0;
+    padding: 50px 50px;
+    /* padding-bottom: 100%; dito yung padding sa bottom; */
+    border: 0.5px solid black;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 0 0 3px rgb(78, 78, 78);
+}
+
+.about-section:hover {
+    border: none;
+    background-color: #99e6e6;
+}
+
+.about-section .main-about h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.about-section .main-about p {
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+/* section 3: skills */
+.skills-section {
+    margin: 50px 0;
+    padding: 50px 50px;
+    padding-left: 50px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 0 0 3px rgb(78, 78, 78);
+}
+
+.skills-section:hover {
+    border: none;
+    background-color: #99e6e6;
+}
+
+.skills-section .skills-set {
+    text-align: center;
+}
+
+.skills-section .skills-set h2 {
+    font-size: 35px;
+}
+
+.skills-section .skills-set p {
+    padding-top: 10px;
+    text-align: justify;
+}
+
+/* icon coloring hahahahhhaha */
+.skills-section .skills-set #htmlUwu {
+    font-weight: bold;
+    color: orange;
+}
+
+.skills-section .skills-set #cssUwu {
+    font-weight: bold;
+    color: blue;
+}
+
+.skills-section .skills-set #jsUwu {
+    font-weight: bold;
+    color: yellow;
+}
+
+.skills-section .skills-set #javaUwu {
+    font-weight: bold;
+    color: brown;
+}
+
+/* section 4: contacts */
+.contacts-section {
+    margin: 50px 0;
+    padding: 50px 50px;
+    padding-left: 50px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 0 0 3px rgb(78, 78, 78);
+}
+
+.contacts-section:hover {
+    border: none;
+    background-color: #99e6e6;
+}
+
+.contacts-section .socmeds h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.contacts-section .socmeds .socmedLinks {
+    text-align: center;
+}
+
+.fa-github:hover{
+    color: blue;
+    transform: scale(1.5);
+}
+
+.fa-instagram:hover{
+    color: rgb(255, 0, 111);
+    transform: scale(1.5);
+}
+
+.fa-tiktok:hover {
+    color: #ff0033;
+    transform: scale(1.5);
+}
+
+.fa-facebook:hover {
+    color: blue;
+    transform: scale(1.5);
+}
+
+.fa-envelope:hover {
+    color: brown;
+    transform: scale(1.5);
+}
+
+/* footer */ 
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px 20px 50px;
+    background: linear-gradient(to bottom, #d6f5f5, #00c3ff);
+    color: black;
+    font-family: arial;
+    font-size: .9em;
+    font-weight: bold;
+    height: 25px;
+}
+
+.fa-arrow-up:hover{
+    color: red;
+    transform: scale(1.2);
+}
+/* responsiveness */
+@media (max-width: 936px) {
+    .hero-section .links a {
+        display: block;
+        margin-top: 20px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    /* about ajjaj */
+    .about-section {
+        padding-top: 20px;
+    }
+
+    /* skills ajjaj */
+    .skills-section {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 802px) {
+    /* navs jahjahah */
+    nav {
+        padding: 0 50px;
+    }
+
+    nav .right a span {
+        display: none;
+    }
+
+    nav .right a:last-child {
+        background-color: transparent;
+        color: black;
+        padding: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    /* section 1: hero */
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+
+    .hero-section .links {
+        margin-top: 5px;
+    }
+
+    .hero-section .links a {
+        text-align: center;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 496px) {
+    /* links */
+    .hero-section .links {
+        display: block;
+        padding: 50px;
+        padding-right: 50px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hero-section .text {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 376px) {
+    .hero-section .headshot img{
+        width: 200px !important;
+    }
+}
