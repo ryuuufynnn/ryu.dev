@@ -12,6 +12,7 @@
 
 html {
     scroll-behavior: smooth;
+    color-scheme: light;
 }
 
 body {
@@ -44,13 +45,13 @@ nav .left a {
     color: black;
     font-size: 22px;
     font-weight: 600;
-    transition: 1s ease-in-out
+    transition: transform 0.3s,
     opacity 0.3s ease-in-out,
     text-shadow 0.3s ease-in-out;
 }
 
 nav .left:hover {
-    transform: scale(1.2);
+    transform: scale(1.02);
     opacity: 0.8;          /* medyo transparent */
     text-shadow: 0 2px 11px rgba(8, 0, 255, 0.3);
 }
@@ -58,7 +59,7 @@ nav .left:hover {
 nav .right a {
     color: black;
     margin: 0 7px;
-    transition: .3s;
+    transition: transform 0.3s;
 }
 
 nav .right a:last-child {
@@ -78,6 +79,7 @@ nav .right a:last-child:hover {
 
 nav .right a span {
     margin-left: 5px;
+    transition: transform 0.3s;
 }
 
 .fa-arrow-down:hover{
@@ -85,7 +87,7 @@ nav .right a span {
     transform: scale(1.2);
 }
 
-nav .right .fa-github:hover, .github:hover{
+nav .right .fa-github:hover, .github:hover {
     color: blue;
     transform: scale(1.5);
 }
@@ -96,7 +98,7 @@ nav .right .fa-instagram:hover, .insta:hover{
 }
 
 nav .right .fa-tiktok:hover, .tiktok:hover{
-    color: #25F4EE;
+    color: #ff2a2a;
     transform: scale(1.5);
 }
 
@@ -119,11 +121,14 @@ nav .right .fa-facebook:hover, .fb:hover{
     margin-right: 50px;
     box-shadow: 0 0 3px rgb(78, 78, 78);
     transition: 0.5s;
+    font-size: 14px;
+    transition: transform .3s;
 }
 
 .hero-section:hover {
     background-color: #99e6e6;
     border: none;
+    transform: scale(1.02);
 }
 
 
@@ -133,6 +138,27 @@ nav .right .fa-facebook:hover, .fb:hover{
 
 .hero-section .text h2 {
     font-size: 40px;
+    animation: typing 5s steps(16) infinite forwards, 
+                blink 0.7s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #000000;
+    width: 16ch;
+}
+
+@keyframes typing {
+    0%, 100% {
+        width: 0;
+    }
+    50% {
+        width: 16ch;
+    }
+    
+}
+
+@keyframes blink {
+    50% {border-color: transparent;
+    }
 }
 
 .hero-section .text p {
@@ -148,12 +174,19 @@ nav .right .fa-facebook:hover, .fb:hover{
     width: 300px;
     padding-right: 10px;
     border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.hero-section .headshot img:hover {
+    transform: scale(1.05);
+   filter: drop-shadow(3px 3px 28px #000000);
 }
 
 .hero-section .links {
     display: block;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
+    padding: 0;
 }
 
 .hero-section .links a {
@@ -162,10 +195,11 @@ nav .right .fa-facebook:hover, .fb:hover{
     border: 1.5px solid black;
     gap: 5px;
     padding: 5px 10px;
-    margin: 10px;
+    margin: 5px;
     transition: .5s;
     border-radius: 5px;
     margin-bottom: 10px;
+    
 }
 
 .hero-section .links a:hover {
@@ -184,21 +218,29 @@ nav .right .fa-facebook:hover, .fb:hover{
     margin-left: 50px;
     margin-right: 50px;
     box-shadow: 0 0 3px rgb(78, 78, 78);
+    transition: transform 0.3s;
 }
 
 .about-section:hover {
     border: none;
     background-color: #99e6e6;
+    transform: scale(1.02);
 }
 
 .about-section .main-about h2 {
     text-align: center;
     font-size: 35px;
+    padding-bottom: 10px;
 }
 
 .about-section .main-about p {
     text-align: justify;
-    font-size: 1.2em;
+    font-size: 1em;
+    padding-bottom: 30px;
+}
+
+.about-section .main-about #last-updated {
+    text-align: center;
 }
 
 /* section 3: skills */
@@ -211,11 +253,13 @@ nav .right .fa-facebook:hover, .fb:hover{
     margin-left: 50px;
     margin-right: 50px;
     box-shadow: 0 0 3px rgb(78, 78, 78);
+    transition: transform 0.3s;
 }
 
 .skills-section:hover {
     border: none;
     background-color: #99e6e6;
+    transform: scale(1.02);
 }
 
 .skills-section .skills-set {
@@ -262,11 +306,13 @@ nav .right .fa-facebook:hover, .fb:hover{
     margin-left: 50px;
     margin-right: 50px;
     box-shadow: 0 0 3px rgb(78, 78, 78);
+    transition: transform .3s;
 }
 
 .contacts-section:hover {
     border: none;
     background-color: #99e6e6;
+    transform: scale(1.02);
 }
 
 .contacts-section .socmeds h2 {
@@ -322,12 +368,17 @@ nav .right .fa-facebook:hover, .fb:hover{
     transform: scale(1.2);
 }
 /* responsiveness */
-@media (max-width: 936px) {
+
+@media (max-width: 943px) {
     .hero-section .links a {
         display: block;
         margin-top: 20px;
         padding: 0 50px;
         text-align: center;
+    }
+
+    .hero-section .text h2 {
+        font-size: 25px;
     }
 
     /* about ajjaj */
@@ -356,12 +407,17 @@ nav .right .fa-facebook:hover, .fb:hover{
         color: black;
         padding: 0;
     }
+
+    /* hero section responsive */
+    .hero-section .text h2 {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 750px) {
     /* section 1: hero */
     .hero-section .text h2 {
-        font-size: 35px;
+        font-size: 17px;
     }
 
     .hero-section .links {
@@ -378,6 +434,10 @@ nav .right .fa-facebook:hover, .fb:hover{
     .hero-section {
         flex-direction: column-reverse;
     }
+
+    .hero-section .text h2 {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 496px) {
@@ -385,6 +445,8 @@ nav .right .fa-facebook:hover, .fb:hover{
     .hero-section .links {
         display: block;
         padding: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
         padding-right: 50px;
         margin-left: 0;
         text-align: center;
@@ -392,6 +454,11 @@ nav .right .fa-facebook:hover, .fb:hover{
 
     .hero-section .text {
         margin-top: 0;
+        padding-bottom: 20px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 25px;
     }
 }
 
