@@ -66,6 +66,8 @@ nav .left a {
     color: black;
     font-size: 22px;
     font-weight: 600;
+    margin-top: 5px;
+    display: inline;
     transition: transform 0.3s,
         opacity 0.3s ease-in-out,
         text-shadow 0.3s ease-in-out;
@@ -76,6 +78,11 @@ nav .left:hover {
     opacity: 0.8;
     /* medyo transparent */
     text-shadow: 0 2px 11px rgba(8, 0, 255, 0.3);
+}
+
+nav .left #javaUwu {
+    color: brown;
+    font-size: 20px;
 }
 
 nav .right a {
