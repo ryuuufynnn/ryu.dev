@@ -12,6 +12,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding: 45px;
     color-scheme: light;
 }
 
@@ -19,6 +20,26 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     transition: opacity 0.5s ease;
+    animation: fadeIn .5s ease-in;
+    /*animation for the keyframes;*/
+    opacity: 1;
+}
+
+/* default loading state pag nagloload ang web; */
+body.loading {
+    opacity: 0;
+}
+
+/* animation fade in sa buong page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 body:fade-out {
@@ -46,13 +67,14 @@ nav .left a {
     font-size: 22px;
     font-weight: 600;
     transition: transform 0.3s,
-    opacity 0.3s ease-in-out,
-    text-shadow 0.3s ease-in-out;
+        opacity 0.3s ease-in-out,
+        text-shadow 0.3s ease-in-out;
 }
 
 nav .left:hover {
     transform: scale(1.02);
-    opacity: 0.8;          /* medyo transparent */
+    opacity: 0.8;
+    /* medyo transparent */
     text-shadow: 0 2px 11px rgba(8, 0, 255, 0.3);
 }
 
@@ -67,7 +89,7 @@ nav .right a:last-child {
     background-color: var(--text-color);
     padding: 5px 15px;
     border-radius: 5px;
-    
+
 }
 
 nav .right a:last-child:hover {
@@ -82,27 +104,31 @@ nav .right a span {
     transition: transform 0.3s;
 }
 
-.fa-arrow-down:hover{
+.fa-arrow-down:hover {
     color: red;
     transform: scale(1.2);
 }
 
-nav .right .fa-github:hover, .github:hover {
+nav .right .fa-github:hover,
+.github:hover {
     color: blue;
     transform: scale(1.5);
 }
 
-nav .right .fa-instagram:hover, .insta:hover{
+nav .right .fa-instagram:hover,
+.insta:hover {
     color: rgb(255, 0, 111);
     transform: scale(1.5);
 }
 
-nav .right .fa-tiktok:hover, .tiktok:hover{
+nav .right .fa-tiktok:hover,
+.tiktok:hover {
     color: #ff2a2a;
     transform: scale(1.5);
 }
 
-nav .right .fa-facebook:hover, .fb:hover{
+nav .right .fa-facebook:hover,
+.fb:hover {
     color: blue;
     transform: scale(1.5);
 }
@@ -138,8 +164,8 @@ nav .right .fa-facebook:hover, .fb:hover{
 
 .hero-section .text h2 {
     font-size: 40px;
-    animation: typing 5s steps(16) infinite forwards, 
-                blink 0.7s step-end infinite alternate;
+    animation: typing 5s steps(16) infinite forwards,
+        blink 0.7s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid #000000;
@@ -147,17 +173,21 @@ nav .right .fa-facebook:hover, .fb:hover{
 }
 
 @keyframes typing {
-    0%, 100% {
+
+    0%,
+    100% {
         width: 0;
     }
+
     50% {
         width: 16ch;
     }
-    
+
 }
 
 @keyframes blink {
-    50% {border-color: transparent;
+    50% {
+        border-color: transparent;
     }
 }
 
@@ -179,7 +209,7 @@ nav .right .fa-facebook:hover, .fb:hover{
 
 .hero-section .headshot img:hover {
     transform: scale(1.05);
-   filter: drop-shadow(3px 3px 28px #000000);
+    filter: drop-shadow(3px 3px 28px #000000);
 }
 
 .hero-section .links {
@@ -199,7 +229,7 @@ nav .right .fa-facebook:hover, .fb:hover{
     transition: .5s;
     border-radius: 5px;
     margin-bottom: 10px;
-    
+
 }
 
 .hero-section .links a:hover {
@@ -207,7 +237,7 @@ nav .right .fa-facebook:hover, .fb:hover{
     color: white;
 }
 
-/* section 2: aboutme */ 
+/* section 2: aboutme */
 .about-section {
     justify-content: center;
     margin: 50px 0;
@@ -239,9 +269,6 @@ nav .right .fa-facebook:hover, .fb:hover{
     padding-bottom: 30px;
 }
 
-.about-section .main-about #last-updated {
-    text-align: center;
-}
 
 /* section 3: skills */
 .skills-section {
@@ -324,12 +351,12 @@ nav .right .fa-facebook:hover, .fb:hover{
     text-align: center;
 }
 
-.fa-github:hover{
+.fa-github:hover {
     color: blue;
     transform: scale(1.5);
 }
 
-.fa-instagram:hover{
+.fa-instagram:hover {
     color: rgb(255, 0, 111);
     transform: scale(1.5);
 }
@@ -349,7 +376,7 @@ nav .right .fa-facebook:hover, .fb:hover{
     transform: scale(1.5);
 }
 
-/* footer */ 
+/* footer */
 .foot {
     display: flex;
     justify-content: space-between;
@@ -363,10 +390,11 @@ nav .right .fa-facebook:hover, .fb:hover{
     height: 25px;
 }
 
-.fa-arrow-up:hover{
+.fa-arrow-up:hover {
     color: red;
     transform: scale(1.2);
 }
+
 /* responsiveness */
 
 @media (max-width: 943px) {
@@ -393,6 +421,7 @@ nav .right .fa-facebook:hover, .fb:hover{
 }
 
 @media (max-width: 802px) {
+
     /* navs jahjahah */
     nav {
         padding: 0 50px;
@@ -415,6 +444,7 @@ nav .right .fa-facebook:hover, .fb:hover{
 }
 
 @media (max-width: 750px) {
+
     /* section 1: hero */
     .hero-section .text h2 {
         font-size: 17px;
@@ -441,6 +471,7 @@ nav .right .fa-facebook:hover, .fb:hover{
 }
 
 @media (max-width: 496px) {
+
     /* links */
     .hero-section .links {
         display: block;
@@ -462,8 +493,51 @@ nav .right .fa-facebook:hover, .fb:hover{
     }
 }
 
+@media (max-width: 401px) {
+    .hero-section, .about-section, .skills-section, .contacts-section {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .about-section .main-about h2, .skills-section .skills-set h2, .contacts-section .socmeds h2 {
+        font-size: 17px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 20px;
+    }
+
+    nav .left #ryuLoadPage {
+        font-size: 17px;
+        margin-left: 0;
+    }
+
+    nav .right a {
+        margin-right: 0;
+    }
+
+    .skills-section .skills-set .icons {
+        padding-top: 5px;
+        font-size: 12px;
+    }
+
+    .contacts-section .socmeds h2 {
+        padding-bottom: 15px;
+    }
+
+    .foot {
+        padding: 20px 30px 20px 30px;
+    }
+
+
+}
+
 @media (max-width: 376px) {
-    .hero-section .headshot img{
+    .hero-section .headshot img {
         width: 200px !important;
+    }
+
+    .foot {
+        font-size: 13px;
     }
 }
