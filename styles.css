@@ -83,6 +83,7 @@ nav .left:hover {
 nav .left #javaUwu {
     color: brown;
     font-size: 20px;
+    cursor: pointer;
 }
 
 nav .right a {
@@ -477,6 +478,16 @@ nav .right .fa-facebook:hover,
     }
 }
 
+@media (max-width: 500px) { 
+    .hero-section .text h2 {
+        font-size: 25px;
+    }
+
+    .skills-section .skills-set .icons {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 496px) {
 
     /* links */
@@ -497,6 +508,12 @@ nav .right .fa-facebook:hover,
 
     .hero-section .text h2 {
         font-size: 25px;
+    }
+}
+
+@media (max-width: 447px) {
+    nav {
+        padding: 0 25px;;
     }
 }
 
